@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "mandelbrot/mandelbrot.h"
 #include "ppmmath/ppmmath.h"
 #include "declarations/declarations.h"
 #include "ppmgraphics/ppmgraphics.h"
-#include <stdlib.h>
 #define MANDELBROT_PATH "../ppms/mandelbrot.ppm"
 
 int main(int argc, char **argv){
@@ -29,7 +30,7 @@ int main(int argc, char **argv){
         if(point_belongs_to_set(c, &j)){
 
 
-            pixels[k].color = (Color){35, j, 175};
+            pixels[k].color = (Color){0, j+50, 125}; //beautify
             xpos++;
             continue;
         }
